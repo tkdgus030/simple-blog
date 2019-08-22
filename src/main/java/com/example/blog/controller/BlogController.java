@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
+@RequestMapping("/blog")
 public class BlogController {
     @RequestMapping(value = "/sayHello", method = RequestMethod.GET)
     public String sayHello() {
@@ -20,7 +21,7 @@ public class BlogController {
 
         return member;
         }
-    @RequestMapping(value = "/list", method = RequestMethod.POST)
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     public List<Member> list() {
         List<Member> memberList = Arrays.asList(
             new Member[]{new Member(1,"Sang hyun1, Oh","tkdgus95114@naver.com"),
